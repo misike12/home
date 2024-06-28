@@ -1,108 +1,108 @@
-简体中文 | [English](./README_EN.md)
+[简体中文](./README.md) | English
 
 <p>
-<strong><h2>無名の主页</h2></strong>
-简单的小主页，原来的看够了，重新弄了一个
+<strong><h2>Unnamed Homepage</h2></strong>
+A simple little homepage, I've seen enough of the original, so I made a new one.
 </p>
 
-![無名の主页](/screenshots/main.jpg)
+![Unnamed Homepage](/screenshots/main.jpg)
 
-> 主页的 Logo 字体已经过压缩，若用本站 Logo 以外的字母会变回默认字体，这里是 [完整字体](https://file.imsyy.top/font/Other/Pacifico-Regular.ttf)，若无法下载，可将字体目录下的 `Pacifico-Regular-all.ttf` 进行替换
+> The logo font of the homepage has been compressed. If you use letters other than the logo of this site, it will revert to the default font. Here is the [complete font](https://file.imsyy.top/font/Other/Pacifico-Regular.ttf). If you can't download it, you can replace it with `Pacifico-Regular-all.ttf` in the font directory.
 
 ### 👀 Demo
 
-> 由于 CDN 缓存原因，查看最新效果可能需要 `Ctrl` + `F5` 强制刷新浏览器缓存
+> Due to CDN caching, viewing the latest effects may require `Ctrl` + `F5` to force refresh the browser cache.
 
-- [無名の主页](https://www.imsyy.top)
-- [無名の主页 - Dev](https://home-imsyy.vercel.app)
-- [無名の主页 - 备用线路](https://home-5iw.pages.dev)
+- [Unnamed Homepage](https://www.imsyy.top)
+- [Unnamed Homepage - Dev](https://home-imsyy.vercel.app)
+- [Unnamed Homepage - Backup](https://home-5iw.pages.dev)
 
-### 🎉 功能
+### 🎉 Features
 
-- [x] 载入动画
-- [x] 站点简介
-- [x] Hitokoto 一言
-- [x] 日期及时间
-- [x] 实时天气
-- [x] 时光进度条
-- [x] 音乐播放器
-- [x] 移动端适配
+- [x] Loading animation
+- [x] Site introduction
+- [x] Hitokoto
+- [x] Date and time
+- [x] Real-time weather
+- [x] Time progress bar
+- [x] Music player
+- [x] Mobile adaptation
 
-### ⚙️ 自动部署
+### ⚙️ Automatic Deployment
 
-如果遇到构建环境或者打包过程出现错误，则可以采用 `Github Actions` 来进行自动构建
+If there are any errors in the build environment or packaging process, you can use `Github Actions` for automatic building.
 
-- 在成功 `fork` 仓库后，前往 `Actions` 页面，若您是首次开启，则会出现下面的提示，点击开启
+- After successfully forking the repository, go to the `Actions` page. If you are opening it for the first time, you will see the prompt below. Click on it to enable it.
 
-  ![步骤1](/screenshots/step1.jpg)
+  ![Step 1](/screenshots/step1.jpg)
 
-- 然后在仓库中进行任意修改后均会触发工作流的运行，在工作流完成后，会在下方生成一个可供下载的压缩包，这就是构建出的静态文件，可自行上传至服务器
+- Then, any modifications made in the repository will trigger the workflow to run. After the workflow is completed, a compressed package will be generated below, which is the built static file. You can upload it to the server by yourself.
 
-  ![步骤2](/screenshots/step2.jpg)
+  ![Step 2](/screenshots/step2.jpg)
 
-### ⚙️ 手动部署
+### ⚙️ Manual Deployment
 
-- **安装** [node.js](https://nodejs.org/zh-cn/) **环境**
+- **Install** [node.js](https://nodejs.org/en/) **environment**
 
   > node > 16.16.0  
   > npm > 8.15.0
 
-- 然后以 **管理员权限** 运行 `cmd` 终端，并 `cd` 到 项目根目录
-- 在 `终端` 中输入：
+- Then, run the `cmd` terminal as **administrator**, and `cd` to the root directory of the project.
+- Enter the following in the `terminal`:
 
 ```bash
-# 安装 pnpm
+# Install pnpm
 npm install -g pnpm
 
-# 安装依赖
+# Install dependencies
 pnpm install
 
-# 预览
+# Preview
 pnpm dev
 
-# 构建
+# Build
 pnpm build
 ```
 
-> 构建完成后，静态资源会在 **`dist` 目录** 中生成，可将 **`dist` 文件夹下的文件**上传至服务器，也可使用 `Vercel` 等托管平台一键导入并自动部署
+> After the build is completed, the static resources will be generated in the **`dist` directory**. You can upload the files **under the `dist` folder** to the server, or use platforms like `Vercel` to import and deploy automatically.
 
-### ⚙️ Docker 部署
+### ⚙️ Docker Deployment
 
-> 安装及配置 Docker 将不在此处说明，请自行解决
+> Installation and configuration of Docker will not be explained here. Please solve it by yourself.
 
 ```bash
-# 构建
+# Build
 docker build -t home .
-# 运行
+# Run
 docker run -p 12445:12445 -d home
 ```
 
-### ⚙️ Vercel 部署
+### ⚙️ Vercel Deployment
 
-> 其他部署平台大致相同，在此不做说明
+> Other deployment platforms are similar and will not be explained here.
 
-1. 点击本仓库右上角的 `Fork`，复制本仓库到你的 `GitHub` 账号
-2. 复制 `/.env.example` 文件并重命名为 `/.env`（ 重要 ）
-3. 按需修改 `/.env` 文件中的配置
-4. 点击 `Deploy`，即可成功部署
+1. Click `Fork` in the upper right corner of this repository to copy it to your `GitHub` account.
+2. Copy the `/.env.example` file and rename it to `/.env` (important).
+3. Modify the configuration in the `/.env` file as needed.
+4. Click `Deploy` to successfully deploy.
 
-### 网站链接
+### Website Links
 
-在 `src/assets/siteLinks.json` 中可以自定义网站链接（以指向自己的网站）:
+You can customize the website links (to point to your own website) in `src/assets/siteLinks.json`:
 
 ```json
 {
   "icon": "Blog",
-  "name": "博客",
+  "name": "Blog",
   "link": "https://blog.imsyy.top/"
 },
 ```
 
-其中 `icon` 网站链接的图标可以在 `src/components/Links/index.vue` 中添加:
+The icon for website links can be added in `src/components/Links/index.vue`:
 
 ```js
-// 可前往 https://www.xicons.org 自行挑选并在此处引入
-// 此处引入的是 fa 类型
+// You can go to https://www.xicons.org to select and import icons here
+// The imported type here is fa
 import {
   Link,
   Blog,
@@ -116,7 +116,7 @@ import {
 
 ...
 
-// 网站链接图标
+// Website link icons
 const siteIcon = {
   Blog,
   Cloud,
@@ -128,59 +128,59 @@ const siteIcon = {
 };
 ```
 
-### 社交链接
+### Social Links
 
-在 `src/assets/socialLinks.json` 中可以自定义社交链接。
+You can customize the social links in `src/assets/socialLinks.json`.
 
-### 天气
+### Weather
 
-天气及地区获取需要 `高德开放平台` 相关 API
+To obtain weather and location information, you need to use the related APIs from `Amap Open Platform`.
 
-- 前往 [高德开放平台控制台](https://console.amap.com/dev/index) 创建一个 `Web 服务` 类型的 `Key`，并将 `Key` 填入 `.env` 中的 `VITE_WEATHER_KEY` 中
+- Go to [Amap Open Platform Console](https://console.amap.com/dev/index) to create a `Web Service` type `Key`, and fill in the `Key` in `.env` as `VITE_WEATHER_KEY`.
 
-也可自行更换其他方式
+You can also use other methods to obtain weather information.
 
-### 音乐
+### Music
 
-> 本项目采用了基于 `MetingJS` 的 `Aplayer` 音乐播放器，可实现快速自定义歌单  
-> \*仅支持 **中国大陆地区**
+> This project uses the `Aplayer` music player based on `MetingJS`, which can quickly customize playlists.
+> *Only supports **China Mainland**.
 
-请在 `.env` 文件中更改歌曲相关参数即可实现自定义歌单列表
+You can change the song-related parameters in the `.env` file to customize the playlist:
 
 ```bash
-# 歌曲 API 地址
+# Song API address
 VITE_SONG_API = "https://api-meting.imsyy.top"
-# 歌曲服务器 ( netease-网易云, tencent-qq音乐 )
+# Song server (netease-NetEase Cloud Music, tencent-QQ Music)
 VITE_SONG_SERVER = "netease"
-# 播放类型 ( song-歌曲, playlist-播放列表, album-专辑, search-搜索, artist-艺术家 )
+# Play type (song-song, playlist-playlist, album-album, search-search, artist-artist)
 VITE_SONG_TYPE = "playlist"
-# 播放 ID
+# Play ID
 VITE_SONG_ID = "7452421335"
 ```
 
-### 字体
+### Fonts
 
-现采用 `HarmonyOS Sans` 开源字体，采用字体拆分，提升加载速度
+Currently using the open source font `HarmonyOS Sans`, using font splitting to improve loading speed.
 
-> 由于本站 `CDN` 已开启防盗链，**非本站域名不可访问**，请将字体引入链接更改为下方内容，否则 **自定义字体将失效**
+> Since the `CDN` of this site has enabled anti-leeching, **non-site domain names cannot be accessed**. Please change the font import link to the following content, otherwise **custom fonts will not work**.
 >
 > `https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css`
 
 <details>
-<summary>旧版方式</summary>
+<summary>Old method</summary>
 
-> 由于本项目引入了中文字体，需要压缩中文字体以提高网页加载速度（ 也可以取消使用中文字体 ）
+> Since this project introduces Chinese fonts, the Chinese fonts need to be compressed to improve the loading speed of the webpage (you can also cancel the use of Chinese fonts).
 
-#### 中文字体去除繁体
+#### Remove Traditional Chinese from Chinese Fonts
 
-- 安装 `Python 3.7` 和 `pip`
-- 运行 `pip install fonttools`
-- 下载 [sc_unicode.txt](https://gist.githubusercontent.com/imaegoo/d64e5088b723c2e02c40985f55ff12db/raw/5ebd2ce49418c73459a9dfe050483409306a6c1d/sc_unicode.txt)
-- 运行 `pyftsubset 字体名称.ttf --unicodes-file=sc_unicode.txt`
+- Install `Python 3.7` and `pip`
+- Run `pip install fonttools`
+- Download [sc_unicode.txt](https://gist.githubusercontent.com/imaegoo/d64e5088b723c2e02c40985f55ff12db/raw/5ebd2ce49418c73459a9dfe050483409306a6c1d/sc_unicode.txt)
+- Run `pyftsubset fontname.ttf --unicodes-file=sc_unicode.txt`
 
-#### 字体进一步压缩
+#### Further Compress Fonts
 
-- 编译安装 `Google woff2`
+- Compile and install `Google woff2`
 
 ```bash
 sudo apt-get install -y git g++ make
@@ -189,56 +189,56 @@ cd woff2
 make clean all
 ```
 
-- 再压缩字体
+- Compress the font again
 
+```bash
+./woff2_compress fontname.ttf
 ```
-./woff2_compress ./字体名称.ttf
-```
 
-- 最终可对原字体进行缓加载，**先行加载压缩后的字体**
+- Finally, you can cache the original font and **preload the compressed font**.
 
-> 详细信息可前往 [虹墨空间站](https://www.imaegoo.com/2020/chinese-font-compress/) 查看原文
+> For more information, please visit [虹墨空间站](https://www.imaegoo.com/2020/chinese-font-compress/) for the original article.
 
 </details>
 
-### 网站图标及网站背景
+### Website Icon and Background
 
-#### 网站背景
+#### Website Background
 
-可以在 `public/images` 中修改网站背景
+You can modify the website background in `public/images`.
 
-如果想要添加更多的本地图片作为网站背景，可以将图片重命名 `background+数字` 的形式，并在 `src/components/Background/index.vue` 中进行修改：
+If you want to add more local images as website backgrounds, you can rename the images in the form of `background+number`, and modify them in `src/components/Background/index.vue`:
 
 ```js
 if (type == 0) {
-  // 修改此处 Math.random() 后面的第一个数字为图片的数量
+  // Modify the first number after Math.random() here to the number of images
   bgUrl.value = `/images/background${Math.floor(Math.random() * 10 + 1)}.webp`;
 }
 ```
 
-#### 网站图标
+#### Website Icon
 
-可以在 `public/images/icon` 中修改网站图标。
+You can modify the website icon in `public/images/icon`.
 
-### 技术栈
+### Tech Stack
 
-- [Vue](https://cn.vuejs.org/)
-- [Vite](https://vitejs.cn/vite3-cn/)
-- [Pinia](https://pinia.vuejs.org/zh/)
+- [Vue](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
+- [Pinia](https://pinia.esm.dev/)
 - [IconPark](https://iconpark.oceanengine.com/official)
 - [xicons](https://xicons.org/)
 - [Aplayer](https://aplayer.js.org/)
 
 ### API
 
-- [韩小韩 WebAPI 接口](https://api.vvhan.com/)
-- [搏天 API](https://api.btstu.cn/doc/sjbz.php)
-- [教书先生 API](https://api.oioweb.cn/doc/weather/GetWeather)
-- [高德开放平台](https://lbs.amap.com/)
-- [Hitokoto 一言](https://hitokoto.cn/)
+- [Han Xiao Han WebAPI](https://api.vvhan.com/)
+- [Bo Tian API](https://api.btstu.cn/doc/sjbz.php)
+- [Jiao Shu Xian Sheng API](https://api.oioweb.cn/doc/weather/GetWeather)
+- [Amap Open Platform](https://lbs.amap.com/)
+- [Hitokoto](https://hitokoto.cn/)
 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=imsyy/home&type=Date)](https://star-history.com/#imsyy/home&Date)
 
-<a title="SSL" target="_blank" href="https://myssl.com/seal/detail?domain=blog.imsyy.top"><img src="https://img.shields.io/badge/MySSL-安全认证-brightgreen"></a>&nbsp;<a title="CDN" target="_blank" href="https://cdnjs.com/"><img src="https://img.shields.io/badge/CDN-Cloudflare-blue"></a>&nbsp;<a title="Copyright" target="_blank" href="https://imsyy.top/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202020--2023-%E7%84%A1%E5%90%8D-red"></a>
+<a title="SSL" target="_blank" href="https://myssl.com/seal/detail?domain=blog.imsyy.top"><img src="https://img.shields.io/badge/MySSL-Security%20Certification-brightgreen"></a>&nbsp;<a title="CDN" target="_blank" href="https://cdnjs.com/"><img src="https://img.shields.io/badge/CDN-Cloudflare-blue"></a>&nbsp;<a title="Copyright" target="_blank" href="https://imsyy.top/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202020--2023-%E7%84%A1%E5%90%8D-red"></a>
